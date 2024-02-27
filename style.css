@@ -159,13 +159,18 @@ text-align:center;
   z-index: 60;
   position: absolute;
   overflow-y: scroll;
+  overflow-x: hidden;
   max-height: 100vh;
+  max-width: 100%;
+  
 }
 
 .content{
+  overflow-x: hidden;
   margin-top: 100vh;
   background-color:#ffff;
   padding-bottom: 10%;
+  width: 100%;
 }
 
 
@@ -644,6 +649,24 @@ color: #f0f0f0;
     height: auto;
   }
 
+  .projects ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    color: #f0f0f0;
+  }
+  .projects li {
+  
+    padding-inline: 0.2em;
+    padding-block: 0.3em;
+    position: relative;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 400;
+  }
 }
 
 @media screen and (min-width: 1024px){
