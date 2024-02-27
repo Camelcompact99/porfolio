@@ -1,0 +1,691 @@
+/* IMPORTS DE FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,500&family=DotGothic16&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+@font-face {
+  font-family: 'TASAOrbiter'; /* Nombre de la fuente */
+  src: url('fonts/TASAOrbiterVF.woff2') format('woff2');/* Formato WOFF2 */
+  font-style: display;
+  font-weight:550;
+}
+@font-face {
+  font-family: 'PPMondwest'; /* Nombre de la fuente */
+  src: url('fonts/PPMondwest-Regular.woff2') format('woff2');/* Formato WOFF2 */
+ 
+}
+@font-face {
+  font-family: 'OffBit'; /* Nombre de la fuente */
+  src: url('fonts/OffBitTrial-Dot.woff2') format('woff2');/* Formato WOFF2 */
+  font-style: display;
+  font-weight:550px;
+}
+/* ESTILOS GENERALES*/
+::-webkit-scrollbar {
+  width: 4px; /* Ancho de la scrollbar */
+  height: 4px;
+}
+
+/* Estilo del thumb (la parte que se desplaza) */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #ccc; /* Color de fondo */
+}
+
+/* Ocultar las flechas de la scrollbar (en algunos navegadores) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Ocultar el carril de la scrollbar */
+::-webkit-scrollbar-track {
+  display: none;
+}
+html,
+body{
+   margin: 0%;
+    overflow:hidden;
+    font-family: 'TasaOrbiter', sans-serif;
+    font-size: 0.98em;
+    
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color: blue;
+}
+li{
+  list-style:none;
+}
+
+/*NAVBAR*/
+.navbar{
+    font-family: "OffBit";
+    display: flex;
+    justify-content: start; /* Espacio entre elementos en los extremos */
+    align-items: center;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    z-index: 61;
+    padding: 2%;
+    
+}
+
+
+.navbarfix li {
+  color:#f0f0f0;
+  transition: transform 0.1s ease
+  
+}
+
+.navbarfix:hover li {
+  color: #00ff00;
+  transform:scale(1.05) ;
+  
+}
+.navbarfix:hover a{
+  padding-block: 10rem;
+  padding: 8rem;
+  transform:scale(1.1) ;
+}
+.navbarfix{
+padding: 1rem; 
+background-color: rgba(96, 95, 95, 0.2);
+backdrop-filter: blur(15px);
+filter: drop-shadow(0px 5px 5px #000000);
+border-radius: 1.2rem;
+margin: 0.2rem;
+transition:  0.3s ease;
+text-align:center;
+
+
+}
+.navbarfix:hover{
+  filter: drop-shadow(0px 5px 10px #00ff00);
+  transform:scale(1.3);
+  color:#00ff00;
+  width:6em;
+  margin-inline: 1em;
+  padding-block: 0.7em;
+  font-size: 1.5em;
+  border-radius:10rem;
+}
+
+
+.foot{
+  font-family:"OffBit";
+  display:flex;
+  justify-content: end; /* Espacio entre elementos en los extremos */
+  align-items: center;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  z-index: 100;
+  padding: 2%;
+}
+
+/*INDEX*/
+.textoindex{
+
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  padding: 2rem;
+  z-index: 30;
+  max-width: 10rem;
+}
+
+.textoindex p {
+  
+  font-size: 1.2em;
+  color: #f0f0f0;
+}
+
+.textoindexfoto{
+  position: relative;
+  width: 18rem;
+  height: auto;
+}
+
+.contentcontainer {
+  z-index: 60;
+  position: absolute;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.content{
+  margin-top: 100vh;
+  background-color:#ffff;
+  padding-bottom: 10%;
+}
+
+
+
+
+
+.bio{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+}
+
+.titulosindex{
+  font-family:'OffBit';
+  display: flex;
+  justify-content: end;
+  padding-top: 5%;
+  padding-inline: 7%;
+  font-size: 1.8em;
+}
+.fotobio{
+  justify-self: center; /* Esto centra horizontalmente la imagen */
+  align-self: center; /* Esto centra verticalmente la imagen */
+  margin-bottom:5rem ;
+  display: flex;
+  flex-direction: column; /* Para alinear imagen y texto verticalmente */
+  position: relative; 
+  width: 60%;
+ 
+}
+.fotobio img {
+  transform-origin: center;
+ 
+  width: 20rem;
+}
+
+.titulosparrafosindex{
+ padding-left: 1%;
+ padding-block: 2rem;
+ margin-right:20%;
+}
+.titulosparrafosindex a{
+  color: blue;
+  text-decoration: underline;
+  
+ }
+.parrafoindex{
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-items: end;
+  padding: 0.5rem;
+}
+.parrafoindex p {
+  padding-block: 1rem;
+  font-size: 1em;
+  position: relative;
+}
+.boton{
+margin-left: auto;
+color: blue;
+}
+.boton a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.boton2{
+  margin-top: 5rem;
+  align-self: center;
+  padding: 2rem; 
+  background-color: rgba(96, 95, 95, 0.2);
+  backdrop-filter: blur(15px);
+  filter: drop-shadow(0px 5px 5px #000000);
+  border-radius: 4rem;
+  width:15em;
+  text-align: center;
+  transition:  0.5s all
+  }
+ .boton2:hover{
+  width: 20em;
+  padding: 3rem;
+  background-color: blue;
+ }
+ .boton2:hover a {
+  color: #f0f0f0;
+  padding: 1rem
+ }
+
+.imagensolaindex{
+  padding: 2%;
+ 
+}
+.imagensolaindex img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+
+  /*IMAGE GRID*/
+
+  .grid-container {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr auto; /* Agregamos una fila adicional para el texto */
+    gap: 3px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 1%;
+    padding-inline: 5% ;
+  
+  }
+  
+  .item {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Para alinear imagen y texto verticalmente */
+    align-items: center;
+    position: relative; /* Añadimos esta propiedad para ajustar el texto correctamente */
+     /* Agregamos la transición para el efecto */
+    
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+    filter: blur(0.8rem);
+    transition: 0.6s ease;
+  }
+
+  .item:hover img {
+    filter: blur(0rem);
+    transition: transform 0.5s ease;
+  }
+  
+  
+  .tituloobras {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 6px;
+    color: #f0f0f0;
+    background-color: rgba(96, 95, 95, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+    transition:  0.5s ease;
+
+  }
+ 
+  .fichaobras {
+    font-family: "OffBit";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    margin: 1rem;
+    padding: 6px;
+    color: #f0f0f0;
+    text-align: end;
+    background-color: rgba(96, 95, 95, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+  }
+  .item:hover .fichaobras{
+    width: 60%;
+    padding: 1.3rem;
+    border-radius:2rem ;
+    backdrop-filter: blur(12px);
+    transition:  0.5s ease;
+
+  }
+
+  
+  /*CURRICULUM----*/
+  .textobio{
+    position: relative;
+    margin-top:10em;
+    font-size: 3rem;
+    z-index: 4;
+   
+  }
+  .tituloscurriculum{
+    font-size: 5rem;
+    margin-inline: 0.5rem; 
+    margin-top: 1rem;
+
+  }
+  .tituloscurriculum2{
+    position: relative;
+    font-size: 5rem;
+    margin-inline: 0.5rem;
+    margin-top: 2rem; 
+    margin-bottom: 0.5rem;
+    text-align: center;
+    z-index: 10;
+  }
+  .logros{
+    margin-inline: 1rem; 
+  
+
+  }
+  .logros li{
+    padding-block: 0.2rem;
+    
+  }
+  .logros2{
+   text-align: end;
+    margin-inline: 8rem; 
+    margin-bottom: 6rem;
+
+  }
+  .logros2 li{
+    padding-block: 0.1rem;
+    
+  }
+
+  .containercurriculum{
+    
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 2;
+    padding-bottom:5rem;
+  }
+  .curriculumlista{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+   
+  }
+ 
+  .itemscurriculum {
+    font-size: 1.1rem;
+    padding-block: 0.8rem  ;
+    padding-inline: 0.6rem;
+    margin-block: 0.3rem;
+    margin-inline: 1rem ;
+    background-color: rgba(96, 95, 95, 0.1);
+    backdrop-filter: blur(1.8em);
+    
+    border-radius: 4rem;
+    transition: 0.5s ease;
+  }
+  .itemscurriculum:hover {
+  padding-inline: 2rem ;
+  padding-block:1.2rem;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+ }
+
+
+ /*scroll*/
+
+.textoscroll {
+  width: 100%;
+  margin-top:2em;
+  font-size: 10rem;
+  color:blue;
+  z-index:-10;
+  position: fixed;
+ 
+  
+ }
+ .contenidosbio{
+   background-color: #ffffff;
+ }
+ 
+
+
+/*WORKS*/
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+  background-color: #000000;
+}
+
+canvas {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
+}
+.contenedor{
+  height:100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+section {
+  position: relative;
+  padding: 10vh 2vw;
+  
+  width: 100vw;
+}
+
+.projects {
+  width: 100%;
+  height: 100%;
+}
+
+.projects ul {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  color: #f0f0f0;
+}
+.projects a {
+color: #f0f0f0;
+}
+
+.projects li {
+  
+  padding-inline: 0.2em;
+  padding-block: 0.3em;
+  position: relative;
+  cursor: pointer;
+  font-size: 5rem;
+  font-weight: 400;
+}
+.projects li:hover {
+  transform: scale(1.1);
+  font-size: 8rem;
+  transform-origin: top left;
+  padding-bottom:3rem;
+  transition: ease 0.7s;
+}
+
+.project-image {
+  opacity: 0%;
+  position: absolute;
+  top: -100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
+
+/*paginas de obras*/
+
+.videofondo{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Proporción 1:1 para el video cuadrado */
+  background-color: black;
+  z-index: -1;
+}
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  
+}
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translateY(-1em);
+  z-index: -1;
+}
+.scrolleablePiezas{
+  height:100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.titulosobras{
+  margin-left: 0.5rem;
+  font-size: 4em;
+  color: #f0f0f0;
+  filter: drop-shadow(0 0 0.75rem black); 
+}
+.fichatecnica{
+  font-size: 1rem;
+}
+.parrafopiezas{
+  color: #f0f0f0;
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+  padding-block: 2rem;
+}
+.parrafopiezas p {
+  padding-bottom: 0.3em;
+}
+
+.imagensecundaria{
+  font-family: "OffBit";
+  padding: 1rem;
+  text-align: end;
+}
+.imagensecundaria img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.parrafopiezaswhitebg{
+  color:black;
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+  padding-block: 2rem;
+}
+
+.parrafopiezaswhitebg p {
+  padding-bottom: 0.3em;
+}
+
+
+.titulosobraswhitebg{
+  margin-left: 0.5rem;
+  font-size: 4em;
+  color: black; 
+}
+.splashimage{
+  z-index: -1;
+  width: 100%;
+  height:auto
+}
+
+
+
+
+
+
+
+
+
+/* Ajusta el z-index y otros estilos según la cantidad de imágenes */
+
+
+
+
+/*THREE*/
+
+#experience{
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.experience-canvas{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+    filter: blur(0rem);
+    transition: 0.6s ease;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .videofondo{
+    position: relative;
+    width: 100%;
+    height: 100;
+    padding-bottom: 50%; /* Proporción 1:1 para el video cuadrado */
+    background-color: black;
+    z-index: -1;
+  }
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+  }
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: translateY(-1em);
+    z-index: -1;
+  }
+  .imagensecundaria{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+
+  .curriculumlista{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    margin-inline: 10em;
+  }
+
+
+  .item:hover .tituloobras{
+    width: 30%;
+    transform: translate(0.0rem,0.1rem);
+    padding: 1.3rem;
+    width: 60%;
+    border-radius:2rem ;
+    backdrop-filter: blur(12px);
+
+  }
+}
+
+
