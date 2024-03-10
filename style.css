@@ -151,10 +151,22 @@ text-align:center;
 
 .textoindexfoto{
   position: relative;
-  width: 18rem;
+  width: 14rem;
   height: auto;
 }
-
+.scrolldown{
+  position: absolute;
+  bottom: 0 ;
+  left: 0; 
+  right:0;
+  text-align: center;
+  padding: 1.5rem;
+  font-family:OffBit;
+  color: #bababa;
+}
+.scrolldown img{
+  width: 0.8rem;
+}
 .contentcontainer {
   z-index: 60;
   position: absolute;
@@ -301,7 +313,7 @@ color: blue;
     width: 100%;
     height: auto;
     transition: transform 0.3s ease; 
-    filter: blur(0.8rem);
+    filter: blur(0.3rem);
     transition: 0.6s ease;
   }
 
@@ -350,11 +362,29 @@ color: blue;
 
   
   /*CURRICULUM----*/
+
+  .video-bio {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+}
+
+video {
+    max-width:85%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
   .textobio{
     position: relative;
-    margin-top:10em;
     font-size: 3rem;
-    z-index: 4;
+    z-index: 10;
    
   }
   .tituloscurriculum{
@@ -397,7 +427,7 @@ color: blue;
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    z-index: 2;
+    z-index: 60;
     padding-bottom:5rem;
   }
   .curriculumlista{
@@ -431,7 +461,7 @@ color: blue;
 
 .textoscroll {
   width: 100%;
-  margin-top:3rem;
+
   font-size: 8rem;
   color:blue;
   z-index:-10;
@@ -441,7 +471,7 @@ color: blue;
  }
  .contenidosbio{
    background-color: #ffffff;
-   
+   margin-top:18rem;
    width: 100%;
    overflow-x: hidden;
  }
@@ -606,7 +636,58 @@ color: #f0f0f0;
   height:auto
 }
 
+/*contacto*/
+  .videocontacto {
+    
+      width: 100vw;
+      height: 100vh;
+      z-index:0
+        }
+  .videocontacto iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index:0
+  }
+  .contenidocontacto{
+    position: absolute;
+    color: #FFFFFF;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family:"OffBit" ;
+    align-items: center;
+  }
+  .contenidocontacto li {
+    font-size: 1.5rem;
+    padding:0.5rem;
+    align-self: center;
+    text-align: center;
+  }
 
+  .contenidocontacto a {
+    color: white;
+  }
+  .contenidocontacto a :hover{
+    color: #00ff00;
+    size: 1.8rem;
+  }
+  @media (min-aspect-ratio: 16/9) {
+    .videocontacto iframe {
+      /* height = 100 * (9 / 16) = 56.25 */
+      height: 56.25vw;
+    }
+  }
+      
+  @media (max-aspect-ratio: 16/9) {
+    .videocontacto iframe {
+      /* width = 100 / (9 / 16) = 177.777777 */
+      width: 177.78vh;
+    }
+  }
 
 
 
