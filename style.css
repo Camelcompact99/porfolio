@@ -764,6 +764,17 @@ color: #f0f0f0;
   font-size: 1em;
   border-radius:10rem;
 }
+.content{
+  overflow-x: hidden;
+  margin-top: 95vh;
+  background-color:#ffff;
+  padding-bottom: 10%;
+  width: 100%;
+}
+.scrolldown{
+  display:none;
+}
+
 
 }
 
